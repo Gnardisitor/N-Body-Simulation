@@ -11,6 +11,9 @@ planetary bodies' position vectors and velocity vectors. Next versions
 will also contain the Leapfrog integration method as well as the Runge-Kutta
 fourth order method (RK4).
 
+There are two new optional python files now which run much faster and display
+a final graph either using Euler of Verlet (Leapfrog).
+
 This script requires that numpy, matplotlib, astroquery.jplhorizons and
 any of their depencies be installed in the python runtime.
 
@@ -21,4 +24,4 @@ python -m pip install -U matplotlib
 python -m pip install -U --pre astroquery[all]
 
 Author : Dragos Bajanica
-Version : 1.0.0
+Version : 1.1.1
