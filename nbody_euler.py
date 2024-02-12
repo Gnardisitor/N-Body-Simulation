@@ -16,12 +16,13 @@ python -m pip install -U matplotlib
 python -m pip install -U --pre astroquery[all]
 
 Author : Dragos Bajanica
-Version : 1.1.0
+Version : 1.1.2
 """
 
 # Import required libraries
 import math									# Used only for the function sqrt()
 import numpy as np 							# Used for better arrays used as vectors
+from tqdm import tqdm						# Progress bar for terminal in python
 import matplotlib.pyplot as plt 			# Used for graphing
 from astroquery.jplhorizons import Horizons # Used to get positions and velocity vectors from NASA's JPL Horizons
 
@@ -211,14 +212,12 @@ ax.set_zlim((-sizeList[n], sizeList[n]))
 
 # Loops simulation for n days
 n = int(input('How many days do you want to simulate?\n'))
+bar = tqdm(total=n)
 for t in range(n):
 	# Update the positions of the bodies in the solar system
 	solar.update()
-
-	# Prints the position of every planetary body and the frame number for debugging
-	for body in solar.bodies:
-		print(f'The position of {body.name} is {body.position} AU.')
-	print(f'Frame {t+1} drawn!')	
+	bar.update(1)
+bar.close()
 
 # Plots all the positions of all the planetary bodies
 for body in solar.bodies:
