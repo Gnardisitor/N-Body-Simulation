@@ -1,10 +1,11 @@
 N-Body Simulation
 
-This script allows the user to simulate any section of the solar system,
-trace orbits, and be able to save the result.
+This script allows the user to simulate any section of the solar system.
 
-There are two new optional python files now which run much faster and display
-a final graph either using Euler or position Verlet (Leapfrog).
+There are three different variants of the programs:
+1. Using the Euler method
+2. Using the Verlet (Leapfrog) method
+3. Using the Runge-Kutta Fourth Order (RK4) method
 
 This script requires that numpy, tqdm, matplotlib, astroquery.jplhorizons and
 any of their depencies be installed in the python runtime.
@@ -17,4 +18,4 @@ python -m pip install -U matplotlib
 python -m pip install -U --pre astroquery[all]
 
 Author : Dragos Bajanica
-Version : 1.1.2
+Version : 1.2.0
