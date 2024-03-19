@@ -1,11 +1,8 @@
 N-Body Simulation
 
-This script allows the user to simulate any section of the solar system.
-
-There are three different variants of the programs:
-1. Using the Euler method
-2. Using the Verlet (Leapfrog) method
-3. Using the Runge-Kutta Fourth Order (RK4) method
+This new version of the program uses Runge-Kutta Fourth Order method in order
+to compute the positions of the planets in the solar system for a specified
+amount of time.
 
 This script requires that numpy, tqdm, matplotlib, astroquery.jplhorizons and
 any of their depencies be installed in the python runtime.
@@ -18,4 +15,4 @@ python -m pip install -U matplotlib
 python -m pip install -U --pre astroquery[all]
 
 Author : Dragos Bajanica
-Version : 1.2.0
+Version : 2.0.0
